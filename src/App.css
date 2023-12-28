@@ -59,6 +59,7 @@ p {
 }
 
 .video-card {
+  position: relative;
   width: 400px;
   height: 100px;
   border-radius: var(--card-border-radius);
@@ -96,5 +97,12 @@ p {
   > h5 {
     font-size: 12px;
     font-weight: 400;
+  }
+
+  > .featured-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
   }
 }

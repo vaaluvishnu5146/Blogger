@@ -1,3 +1,5 @@
+import featured from "../../assets/featured.png";
+
 function VideoCard({ movie = {} }) {
   return (
     <div className="video-card">
@@ -19,8 +21,11 @@ function VideoCard({ movie = {} }) {
         </svg>
       </div>
       <div className="video-information">
-        <h3>{movie.name}</h3>
-        <h5>{movie.description}</h5>
+        <h3 onClick={() => console.log(movie.name)}>{movie.name}</h3>
+        <h5 onClick={() => console.log(movie.description)}>
+          {movie.description}
+        </h5>
+        {movie.featured && <img className="featured-image" src={featured} />}
       </div>
     </div>
   );
