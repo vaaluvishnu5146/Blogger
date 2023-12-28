@@ -1,27 +1,34 @@
+import React, { useState } from "react";
 import "./App.css";
-import VideoCard from "./components/VideoCard/VideoCard";
 
 function App() {
-  const data = [
-    {
-      id: 1,
-      name: "Leo",
-      description: "Vijay's blockbuster movie",
-      featured: false,
-    },
-    {
-      id: 2,
-      name: "PS2",
-      description: "Historical and Fantasy movie",
-      featured: true,
-    },
-  ];
+  const [todos, setTodos] = useState([]);
+
+  function handleAddClick(e) {
+    let todoInput = document.getElementById("todo");
+    if (todoInput.value.length > 0) {
+      let todosCopy = [...todos];
+      todosCopy.push(todoInput.value);
+      setTodos(todosCopy);
+      todoInput.value = "";
+    }
+    // console.log(todos);
+  }
+
   return (
-    <>
-      {data.map((movie) => (
-        <VideoCard movie={movie} key={`movie-card-${movie.id}`} />
-      ))}
-    </>
+    <div>
+      <div className="form-container">
+        <input id="todo" placeholder="Type here..." />
+        <button onClick={handleAddClick}>Add</button>
+      </div>
+      <div className="lists-container">
+        <ul>
+          {todos.map((d, index) => (
+            <li key={`${d}-${index}`}>{d}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
 
