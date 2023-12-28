@@ -1,0 +1,16 @@
+.card {
+  cursor: pointer;
+  .card-body {
+    .card-title {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 14px;
+      color: grey;
+    }
+    .card-text {
+      text-align: center;
+      color: rgb(20, 20, 20);
+      font-size: 12px;
+    }
+  }
+}
