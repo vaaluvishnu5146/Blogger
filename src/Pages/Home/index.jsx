@@ -11,6 +11,7 @@ export default function Home() {
     "Blog 5",
     "Blog 6",
     "Blog 7",
+    "Blog 8",
   ]);
   return (
     <div className="container">
