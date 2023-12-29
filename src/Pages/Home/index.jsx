@@ -18,7 +18,7 @@ export default function Home() {
       <Navigation />
       <div className="row row-gap-3" id="blog-listing-container">
         {blogs.map((blog, index) => (
-          <BlogCard data={blog} key={`blog-${index}`} />
+          <BlogCard key={`blog-${index}`} />
         ))}
       </div>
     </div>

@@ -1,10 +1,10 @@
 import "./App.css";
-import Home from "./Pages/Home";
+import Counter from "./Pages/Counter";
 
 function App() {
   return (
     <>
-      <Home />
+      <Counter />
     </>
   );
 }
